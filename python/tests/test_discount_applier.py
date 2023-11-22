@@ -1,4 +1,5 @@
 import pytest
+from unittest.mock import Mock
 from discount_applier import DiscountApplier
 
 class MockNotifier():

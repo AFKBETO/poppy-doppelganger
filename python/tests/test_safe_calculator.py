@@ -1,4 +1,5 @@
 import pytest
+from unittest.mock import Mock
 from safe_calculator import SafeCalculator
 
 def test_divide_should_not_raise_any_error_when_authorized():
