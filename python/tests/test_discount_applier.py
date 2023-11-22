@@ -17,6 +17,9 @@ def test_apply_v1():
 
 
 def test_apply_v2():
-    # TODO: write a test that fails due to the bug in
-    # DiscountApplier.apply_v2
-    pass
+    users = ["0","1","2","3"]
+    notifier = MockNotifier()
+    discApp = DiscountApplier(notifier)
+    discApp.apply_v2(10, users)
+    for i in range(len(users)):
+        assert users[i] == notifier.users_notified[i]
